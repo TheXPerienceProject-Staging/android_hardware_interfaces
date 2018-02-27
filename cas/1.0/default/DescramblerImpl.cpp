@@ -88,7 +88,6 @@ Return<void> DescramblerImpl::descramble(
 
     sp<IMemory> srcMem = mapMemory(srcBuffer.heapBase);
 
-
     // Validate if the offset and size in the SharedBuffer is consistent with the
     // mapped ashmem, since the offset and size is controlled by client.
     if (srcMem == NULL) {
