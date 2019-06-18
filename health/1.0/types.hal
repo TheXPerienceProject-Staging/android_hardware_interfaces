@@ -161,10 +161,10 @@ struct HealthConfig {
     string batteryCycleCountPath;
 	
 	/** Moto Mods info */
-    int32_t modLevel;
-    int32_t modStatus;
-    int32_t modType;
-    int32_t modFlag;
+    int modLevel;
+    int modStatus;
+    int modType;
+    int modFlag;
 };
 
 /**
