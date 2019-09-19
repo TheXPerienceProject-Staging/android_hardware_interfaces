@@ -53,7 +53,6 @@ LOCAL_SHARED_LIBRARIES := \
     android.hardware.soundtrigger@2.0 \
     android.hardware.soundtrigger@2.1 \
     android.hardware.soundtrigger@2.2 \
-    com.qualcomm.qti.bluetooth_audio@1.0 \
     libhwbinder \
     libcutils
 
