@@ -384,7 +384,11 @@ BluetoothAudioCodecs::GetA2dpOffloadCodecCapabilities(
       case CodecType::UNKNOWN:
       case CodecType::VENDOR:
       case CodecType::LC3:
+        break;
       case CodecType::APTX_ADAPTIVE:
+        codec_capability.capabilities
+            .set<CodecCapabilities::Capabilities::aptxCapabilities>(
+                kDefaultOffloadAptxHdCapability);
         break;
     }
   }
@@ -450,6 +454,10 @@ bool BluetoothAudioCodecs::IsOffloadCodecConfigurationValid(
       }
       break;
     case CodecType::APTX_ADAPTIVE:
+      if (IsOffloadAptxHdConfigurationValid(codec_specific)) {
+        return true;
+      }
+      break;
     case CodecType::LC3:
     case CodecType::UNKNOWN:
     case CodecType::VENDOR:
